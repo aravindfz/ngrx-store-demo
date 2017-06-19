@@ -1,3 +1,15 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="text-center">
+        NGRX-STORE DEMO APP
+      </h3>
+    </div>
+  </div>
+  <span *ngIf="true">
+  <demo-component></demo-component>
+  </span>
+  <span *ngIf="false">
+    <editable-component></editable-component>
+  </span>
+</div>
