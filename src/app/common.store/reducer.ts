@@ -6,6 +6,10 @@ export class ACTIONS {
     static LOAD_DATA: string = 'LOAD_DATA';
     static MODIFY_DATA: string = 'MODIFY_DATA';
 }
+export enum ACTION {
+    LOAD_STUDENT,
+    DELETE_STUDENT
+}
 
 let initialState = [];
 

@@ -16,7 +16,7 @@ export class DemoService {
     constructor(private appStore: Store<AppStore>, private http: Http) { }
 
     getData() {
-        return this.http.get(this.URL)
+        this.http.get(this.URL)
             .map(response => <Demo[]>response.json())
             .skipWhile(data => { return _.isEmpty(data) })
             .subscribe(data => {
