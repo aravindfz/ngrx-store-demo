@@ -9,6 +9,7 @@ import { DemoComponent } from "app/demo.component/demo.component";
 import { DemoService } from "app/demo.component/demo.service";
 import { EditableComponent } from "app/editable.component/editable.component";
 import { EditableService } from "app/editable.component/editable.component.service";
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,9 @@ import { EditableService } from "app/editable.component/editable.component.servi
     HttpModule,
     StoreModule.provideStore({
       demoSlice
+    }),
+    StoreDevtoolsModule.instrumentOnlyWithExtension({
+      maxAge: 5
     })
   ],
   providers: [DemoService, EditableService],
